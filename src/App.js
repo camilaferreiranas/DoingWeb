@@ -1,24 +1,28 @@
 import React from 'react';
+import Login from './components/login/login';
+import CadastroUsuario from './components/cadastro_usuario/cadastro_usuario';
+import Dashboard from './components/dashboard/dashboard';
+import Album from './components/main/main';
+import Footer from './components/footer/footer';
 import logo from './logo.svg';
 import './App.css';
+import Button from '@material-ui/core/Button';
+import { withStyles } from "@material-ui/core/styles";
+import MoreVertIcon from "@material-ui/icons/MoreVert";
+import { Paper, Typography, Grid, Card, CardHeader, CardContent, Avatar, List, ListItem, ListItemText, IconButton } from "@material-ui/core";
+
+
+import firebase from 'firebase';
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Album/>
+     <Footer/>
     </div>
   );
 }
