@@ -58,19 +58,19 @@ function Copyright() {
       }
   }));
 
-function CadastroUsuario() {
+function Assinatura() {
     const classes = useStyles();
-    const [funcao, setFuncao] = React.useState('');
+    const [tempo_assinatura, setTempo] = React.useState('');
 
   const inputLabel = React.useRef(null);
  
   
 
   const handleChange = event => {
-    setFuncao(event.target.value);
+    setTempo(event.target.value);
   };
     return (
-        <div className="CadastroUsuario">
+        <div className="Assinatura">
           <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -78,20 +78,45 @@ function CadastroUsuario() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Cadastro de Usuário
+          Pagamento de assinatura
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
-                autoComplete="fname"
-                name="firstName"
+                autoComplete="tnome"
+                name="nometitular"
                 variant="outlined"
                 required
                 fullWidth
                 id="nome"
-                label="Nome"
+                label="Nome do Titular ou Razão Social"
                 autoFocus
+              />
+            </Grid>
+
+            <Grid item xs={12}>
+              <TextField
+                autoComplete="tcpf"
+                name="cpfcnpj"
+                variant="outlined"
+                required
+                fullWidth
+                id="nome"
+                label="CPF ou CNPJ"
+                autoFocus
+              />
+            </Grid>
+            
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="n_cartao"
+                label="Nº do cartão"
+                name="n_cartao"
+                autoComplete="número cartão"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -99,47 +124,25 @@ function CadastroUsuario() {
                 variant="outlined"
                 required
                 fullWidth
-                id="sobrenome"
-                label="Sobrenome"
-                name="lastName"
-                autoComplete="lname"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                label="E-mail"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                label="Senha"
-                type="password"
-                id="senha"
-                autoComplete="current-password"
+                name="cvv"
+                label="CVV"
+                type="c_cvv"
+                id="cvv"
+                autoComplete="cvv"
               />
             </Grid>
            <Grid item xs={6}>
            <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-label">Função</InputLabel>
+        <InputLabel id="demo-simple-select-label">Assinatura</InputLabel>
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={funcao}
+          value={tempo_assinatura}
           onChange={handleChange}
         >
-          <MenuItem value={1}>Administrador</MenuItem>
-          <MenuItem value={2}>Supervisor</MenuItem>
-          <MenuItem value={3}>Funcionário</MenuItem>
+          <MenuItem value={1}>Mensal - R$14,9</MenuItem>
+          <MenuItem value={2}>Anual - R$ 146,62</MenuItem>
+          
         </Select>
       </FormControl>
             
@@ -153,15 +156,9 @@ function CadastroUsuario() {
             color="primary"
             className={classes.submit}
           >
-            Cadastro
+            FINALIZAR PAGAMENTO
           </Button>
-          <Grid container justify="flex-end">
-            <Grid item>
-              <Link href="#" variant="body2">
-                Já tem uma conta? Faça login. 
-              </Link>
-            </Grid>
-          </Grid>
+          
         </form>
       </div>
       <Box mt={5}>
@@ -173,4 +170,4 @@ function CadastroUsuario() {
       );
 }
 
-export default CadastroUsuario;
+export default Assinatura;

@@ -10,10 +10,13 @@ import Button from '@material-ui/core/Button';
 import { withStyles } from "@material-ui/core/styles";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { Paper, Typography, Grid, Card, CardHeader, CardContent, Avatar, List, ListItem, ListItemText, IconButton } from "@material-ui/core";
-
+import Perfil from './components/perfil/perfil';
 
 import firebase from 'firebase';
-
+import EsqueciSenha from './components/login/esqueci_senha';
+import Suporte from './components/suporte/suporte';
+import Assinatura from './components/assinatura/assinatura';
+import CadastroAtividade from './components/cadastro_atividade/cadastro_atividade';
 
 
 
@@ -21,7 +24,7 @@ import firebase from 'firebase';
 function App() {
   return (
     <div className="App">
-      <Album/>
+      <CadastroAtividade/>
      <Footer/>
     </div>
   );

@@ -12,13 +12,14 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import EsqueciSenha from './esqueci_senha';
+
+
 import {
     BrowserRouter as Router,
     Switch,
     Route
     } from "react-router-dom";
-import CadastroUsuario from '../cadastro_usuario/cadastro_usuario';    
+   
 
 
 function Copyright() {
@@ -55,7 +56,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-function Login() {
+function Suporte() {
     const classes = useStyles();
 
     return (
@@ -68,7 +69,7 @@ function Login() {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Login
+          Mande uma mensagem. Em pouco tempo o suporte do Doing irá entrar em contato. 
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -82,16 +83,41 @@ function Login() {
             autoComplete="email"
             autoFocus
           />
+           <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="nome_usuario"
+            label="Nome:"
+            name="nome"
+            autoComplete="nome"
+            autoFocus
+          />
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            name="password"
-            label="Senha"
-            type="password"
-            id="password"
-            autoComplete="current-password"
+            id="Assunto"
+            label="Assunto"
+            name="assunto"
+            autoComplete="mensagem"
+            autoFocus
+          />
+
+            <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            multiline={true}
+            fullWidth
+            id="mensagem"
+            label="Mensagem do usuário"
+            name="mensagem"
+            placeholder="Descreva o motivo do contato com o suporte."
+            autoComplete="mensagem"
+            autoFocus
           />
           
           <Button
@@ -101,23 +127,9 @@ function Login() {
             color="primary"
             className={classes.submit}
           >
-            ENTRAR
+            ENVIAR MENSAGEM
           </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="#" variant="body2">
-                Esqueceu a senha?
-              </Link>
-            </Grid>
-            <Grid item>
-               
-              <Link href="#" >
-                {"Não tem uma conta? Cadastre-se"}
-              </Link>
-              
-            </Grid>
-            
-          </Grid>
+         
         </form>
       </div>
       <Box mt={8}>
@@ -128,4 +140,4 @@ function Login() {
       );
 }
 
-export default Login;
+export default Suporte;
