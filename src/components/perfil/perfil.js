@@ -17,18 +17,6 @@ import DoneIcon from '@material-ui/icons/Done';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Avatar from '@material-ui/core/Avatar';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="/">
-        Doing Brasil
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -151,7 +139,7 @@ export default function Album() {
         </Button>
       </main>
       
-      {/* End footer */}
+      
     </React.Fragment>
   );
 }

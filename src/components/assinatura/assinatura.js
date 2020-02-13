@@ -17,18 +17,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          Doing Brasil
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
+
 
   const useStyles = makeStyles(theme => ({
     paper: {
@@ -161,9 +150,7 @@ function Assinatura() {
           
         </form>
       </div>
-      <Box mt={5}>
-        <Copyright />
-      </Box>
+      
     </Container>
          
         </div>

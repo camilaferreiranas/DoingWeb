@@ -23,18 +23,7 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Doing Brasil
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+
 
 const drawerWidth = 240;
 
@@ -173,7 +162,7 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={12}>
-            {/* Chart */}
+           
             <Grid item xs={12} md={12} lg={12}>
               <Paper className={fixedHeightPaper}>
                 Lista de atividades
@@ -182,9 +171,7 @@ export default function Dashboard() {
             
             
           </Grid>
-          <Box pt={4}>
-            <Copyright />
-          </Box>
+          
         </Container>
       </main>
     </div>

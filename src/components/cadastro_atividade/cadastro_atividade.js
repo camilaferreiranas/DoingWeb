@@ -1,33 +1,21 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
+
 import Button from '@material-ui/core/Button';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import Toolbar from '@material-ui/core/Toolbar';
+
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+
 
 import TextField from '@material-ui/core/TextField';
 
-import Box from '@material-ui/core/Box';
 
 
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="/">
-        Doing Brasil
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+
 
 const useStyles = makeStyles(theme => ({
     paper: {
@@ -73,14 +61,7 @@ export default function CadastroAtividade() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          
-          <Typography variant="h6" color="inherit" noWrap>
-            Header
-          </Typography>
-        </Toolbar>
-      </AppBar>
+    
       <main>
         
       <Container component="main" maxWidth="xs">
@@ -158,9 +139,7 @@ export default function CadastroAtividade() {
           
         </form>
       </div>
-      <Box mt={5}>
-        <Copyright />
-      </Box>
+      
     </Container>
       </main>
       

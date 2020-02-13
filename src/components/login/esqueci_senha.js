@@ -22,18 +22,7 @@ import {
 import CadastroUsuario from '../cadastro_usuario/cadastro_usuario';    
 
 
-function Copyright() {
-    return (
-      <Typography variant="body2" color="textSecondary" align="center">
-        {'Copyright © '}
-        <Link color="inherit" href="https://material-ui.com/">
-          Doing Brasil
-        </Link>{' '}
-        {new Date().getFullYear()}
-        {'.'}
-      </Typography>
-    );
-  }
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -99,9 +88,7 @@ function EsqueciSenha() {
          
         </form>
       </div>
-      <Box mt={8}>
-        <Copyright />
-      </Box>
+      
     </Container>
         </div>
       );
