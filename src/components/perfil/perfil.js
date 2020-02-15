@@ -12,11 +12,12 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import DoneIcon from '@material-ui/icons/Done';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Avatar from '@material-ui/core/Avatar';
-
+import Header from '../header/header';
+import FooterSecundario from '../footer_secundario/footer_secundario';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -62,81 +63,39 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const cards = [1, 2];
+const cards = [1];
 
-export default function Album() {
+export default function Perfil() {
   const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          
-          <Typography variant="h6" color="inherit" noWrap>
-            Header
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      
       <main>
         {/* Hero unit */}
-        <div className={classes.heroContent}>
-            <div className={classes.paper}>
-                <Avatar className={classes.avatar}>
+        <div className={classes.paper}>
+        <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
-            </Avatar>
-            
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Olá, Usuário
-            </Typography>
-            <DoneIcon align="right"/>
-            </div>
-          <Container maxWidth="sm">
-          
-            
-            <div className={classes.heroButtons}>
-              
-              
-            </div>
-          </Container>
+        </Avatar>
+        <Typography>
+          Usuário
+        </Typography>
+        <Typography>
+          Tipo Usuário
+        </Typography>
+        <br/>
+        <div align="right">
+          {/*tornar campos editaveis*/}
+          <a href="#" >Editar Perfil</a>
+          </div>
+
+        <Typography>
+          Estado tarefas
+          </Typography>  
+        
         </div>
-        <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map(card => (
-              <Grid item key={card} xs={12} sm={12} md={6}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Atividade
-                    </Typography>
-                    <Typography>
-                      Tarefas
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      Visualizar
-                    </Button>
-                    <Button size="small" color="primary">
-                      Adicionar tarefas
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-            
-          </Grid>
-         
-        </Container>
-        <Button variant="outlined" color="primary" href="./cadastro_atividade">
-        +
-        </Button>
+       
       </main>
       
       

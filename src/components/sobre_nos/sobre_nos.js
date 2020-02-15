@@ -60,70 +60,22 @@ function Suporte() {
       <div className={classes.paper}>
         <Avatar>
         <img src={Logo}></img>
-        </Avatar>
+        </Avatar> <br/>
         <Typography component="h1" variant="h5">
-          Mande uma mensagem. Em pouco tempo o suporte do Doing irá entrar em contato. 
-        </Typography>
-        <form className={classes.form} noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="E-mail"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-           <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="nome_usuario"
-            label="Nome:"
-            name="nome"
-            autoComplete="nome"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="Assunto"
-            label="Assunto"
-            name="assunto"
-            autoComplete="mensagem"
-            autoFocus
-          />
+         Sobre Nós 
+        </Typography><br/>
+        <Typography component="h4" align="justify"> 
+            O Doing veio da necessidade de organizar melhor os projetos. <br/>
+            Ao utilizar as aplicações disponíveis no mercado, sentiu-se uma carência de algumas
+             funcionalidades, o Doing também tem como objetivo 
+            ser uma plataforma simples, para não ser uma tarefa complicada para a
+            equipe. <br/>    
 
-            <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            multiline={true}
-            fullWidth
-            id="mensagem"
-            label="Mensagem do usuário"
-            name="mensagem"
-            placeholder="Descreva o motivo do contato com o suporte."
-            autoComplete="mensagem"
-            autoFocus
-          />
-          
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            ENVIAR MENSAGEM
-          </Button>
-         
-        </form>
+        </Typography> <br/>
+        <Typography component="h3" variant="h5">
+         O Doing é um produto iVent Brasil. 
+        </Typography><br/>
+        
       </div>
       
     </Container>

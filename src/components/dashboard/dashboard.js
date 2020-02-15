@@ -19,9 +19,12 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
+import Perfil from '../perfil/perfil';
+import Atividades from './Atividades';
+
 import Orders from './Orders';
+import Footer from '../footer/footer';
+
 
 
 
@@ -102,10 +105,10 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 500,
   },
 }));
-
+const cards = [1, 2];
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -161,18 +164,24 @@ export default function Dashboard() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={12}>
-           
-            <Grid item xs={12} md={12} lg={12}>
+          <Grid container spacing={3}>
+            {/* Atividades */}
+            <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                Lista de atividades
+                <Atividades />
               </Paper>
             </Grid>
-            
+            {/* Perfil */}
+            <Grid item xs={12} md={4} lg={3}>
+              <Paper className={fixedHeightPaper}>
+                <Perfil />
+              </Paper>
+            </Grid>
             
           </Grid>
           
         </Container>
+        <Footer />
       </main>
     </div>
   );

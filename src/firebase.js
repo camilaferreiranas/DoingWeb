@@ -1,13 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyCLqfZ_pysfUoGQqqNIOtaoQ2F-08K3hZE",
-    authDomain: "doing-42a64.firebaseapp.com",
-    databaseURL: "https://doing-42a64.firebaseio.com",
-    projectId: "doing-42a64",
-    storageBucket: "doing-42a64.appspot.com",
-    messagingSenderId: "1079075261249",
-    appId: "1:1079075261249:web:21680a7500ef1e86532fc0",
-    measurementId: "G-6LS2NWCW89"
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  export default firebase;
+  apiKey: "AIzaSyBApFUesdWcNyCt78PUXsCmPaICXb1q-RM",
+  authDomain: "doing-7317d.firebaseapp.com",
+  databaseURL: "https://doing-7317d.firebaseio.com",
+  projectId: "doing-7317d",
+  storageBucket: "doing-7317d.appspot.com",
+  messagingSenderId: "888066268540",
+  appId: "1:888066268540:web:cfa3a1b6f05f1b00cb98f9",
+  measurementId: "G-5ML1W2GDX6"
+};

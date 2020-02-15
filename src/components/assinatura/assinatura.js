@@ -16,7 +16,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-
+import Header from '../header/header';
+import FooterSecundario from '../footer_secundario/footer_secundario';
 
 
   const useStyles = makeStyles(theme => ({
@@ -60,14 +61,16 @@ function Assinatura() {
   };
     return (
         <div className="Assinatura">
+          <Header/>
           <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
+        
         <Typography component="h1" variant="h5">
           Pagamento de assinatura
+        </Typography>
+        <Typography component="h5" variant="h5">
+          Ao assinar o Doing você irá desbloquear vários benefícios
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
@@ -129,8 +132,12 @@ function Assinatura() {
           value={tempo_assinatura}
           onChange={handleChange}
         >
-          <MenuItem value={1}>Mensal - R$14,9</MenuItem>
-          <MenuItem value={2}>Anual - R$ 146,62</MenuItem>
+          <MenuItem value={1}>Nível Ferro - R$14,9</MenuItem>
+          <MenuItem value={2}>Nível Bronze - R$ 24,9</MenuItem>
+          <MenuItem value={3}>Nível Prata - R$ 49,90</MenuItem>
+          <MenuItem value={4}>Nível Ouro - R$ 99,90</MenuItem>
+          
+          
           
         </Select>
       </FormControl>
@@ -152,7 +159,7 @@ function Assinatura() {
       </div>
       
     </Container>
-         
+         <FooterSecundario/>
         </div>
       );
 }

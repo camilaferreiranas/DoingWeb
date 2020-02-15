@@ -5,7 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
+
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
@@ -13,11 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import EsqueciSenha from './esqueci_senha';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route
-    } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import CadastroUsuario from '../cadastro_usuario/cadastro_usuario';    
 
 
@@ -95,13 +91,13 @@ function Login() {
           </Button>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
+              <Link to="/esquecisenha" variant="body2">
                 Esqueceu a senha?
               </Link>
             </Grid>
             <Grid item>
                
-              <Link href="#" >
+              <Link to="/cadastrousuario" >
                 {"Não tem uma conta? Cadastre-se"}
               </Link>
               

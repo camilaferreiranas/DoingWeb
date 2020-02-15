@@ -9,6 +9,9 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import AddIcon from '@material-ui/icons/Add';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { Link } from 'react-router-dom';
 
 export const mainListItems = (
   <div>
@@ -16,21 +19,18 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
+
+     <a href="/dashboard" style={{textDecoration: 'none'}} ><ListItemText primary="Dashboard" /></a> 
     </ListItem>
+    
     
     <ListItem button>
       <ListItemIcon>
-        <PeopleIcon />
+        <AddIcon />
       </ListItemIcon>
-      <ListItemText primary="Perfil" />
+     <a href="/cadastroatividade" style={{textDecoration: 'none'}}><ListItemText primary="Cadastrar atividade" /></a> 
     </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Atividades" />
-    </ListItem>
+    
     
   </div>
 );
@@ -41,7 +41,14 @@ export const secondaryListItems = (
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <ListItemText primary="Suporte" />
+      < a href="/suporte" style={{textDecoration: 'none'}}><ListItemText primary="Suporte" /></a>
     </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <ExitToAppIcon />
+      </ListItemIcon>
+      <ListItemText primary="Sair" />
+    </ListItem>
+    
   </div>
 );
