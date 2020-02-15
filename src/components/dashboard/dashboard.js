@@ -22,7 +22,6 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Perfil from '../perfil/perfil';
 import Atividades from './Atividades';
 
-import Orders from './Orders';
 import Footer from '../footer/footer';
 
 
